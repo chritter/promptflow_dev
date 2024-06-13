@@ -1,0 +1,83 @@
+{
+  "package": {},
+  "code": {
+    "fetch_text_content_from_url.py": {
+      "type": "python",
+      "inputs": {
+        "url": {
+          "type": [
+            "string"
+          ]
+        }
+      },
+      "function": "fetch_text_content_from_url",
+      "is_builtin": false,
+      "name": "fetch_text_content_from_url.py",
+      "source": "fetch_text_content_from_url.py",
+      "toolId": "fetch_text_content_from_url.py"
+    },
+    "summarize_text_content.jinja2": {
+      "type": "llm",
+      "inputs": {
+        "text": {
+          "type": [
+            "string"
+          ]
+        }
+      },
+      "description": "Summarize webpage content into a short paragraph.",
+      "is_builtin": false,
+      "name": "summarize_text_content.jinja2",
+      "source": "summarize_text_content.jinja2",
+      "toolId": "summarize_text_content.jinja2"
+    },
+    "prepare_examples.py": {
+      "type": "python",
+      "function": "prepare_examples",
+      "is_builtin": false,
+      "name": "prepare_examples.py",
+      "source": "prepare_examples.py",
+      "toolId": "prepare_examples.py"
+    },
+    "classify_with_llm.jinja2": {
+      "type": "llm",
+      "inputs": {
+        "url": {
+          "type": [
+            "string"
+          ]
+        },
+        "examples": {
+          "type": [
+            "string"
+          ]
+        },
+        "text_content": {
+          "type": [
+            "string"
+          ]
+        }
+      },
+      "description": "Multi-class classification of a given url and text content.",
+      "is_builtin": false,
+      "name": "classify_with_llm.jinja2",
+      "source": "classify_with_llm.jinja2",
+      "toolId": "classify_with_llm.jinja2"
+    },
+    "convert_to_dict.py": {
+      "type": "python",
+      "inputs": {
+        "input_str": {
+          "type": [
+            "string"
+          ]
+        }
+      },
+      "function": "convert_to_dict",
+      "is_builtin": false,
+      "name": "convert_to_dict.py",
+      "source": "convert_to_dict.py",
+      "toolId": "convert_to_dict.py"
+    }
+  }
+}

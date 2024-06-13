@@ -1,0 +1,55 @@
+{
+  "orientation": "Vertical",
+  "nodeLayouts": {
+    "inputs": {
+      "x": 67,
+      "y": 62,
+      "index": -1
+    },
+    "outputs": {
+      "x": 122,
+      "y": 612,
+      "index": -1
+    },
+    "fetch_text_content_from_url": {
+      "x": 12,
+      "y": 172,
+      "height": 75,
+      "index": 0
+    },
+    "summarize_text_content": {
+      "x": 12,
+      "y": 282,
+      "height": 75,
+      "index": 1
+    },
+    "prepare_examples": {
+      "x": 233,
+      "y": 282,
+      "height": 75,
+      "index": 2
+    },
+    "classify_with_llm": {
+      "x": 122,
+      "y": 392,
+      "height": 75,
+      "index": 3
+    },
+    "convert_to_dict": {
+      "x": 122,
+      "y": 502,
+      "height": 75,
+      "index": 4
+    }
+  },
+  "viewport": {
+    "transformMatrix": [
+      1,
+      0,
+      0,
+      1,
+      45.133331298828125,
+      168.25
+    ]
+  }
+}
