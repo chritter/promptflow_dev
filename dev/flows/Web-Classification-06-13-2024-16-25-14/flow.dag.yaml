@@ -4,6 +4,7 @@ inputs:
   url:
     type: string
     default: https://www.microsoft.com/en-us/store/collections/xboxseriessconsoles?icid=CNav_Xbox_Series_S
+    description: url to scrape and analyze.
     is_chat_input: false
 outputs:
   category:
@@ -65,6 +66,14 @@ nodes:
   connection: prmoptflowkeyaml
   api: chat
   module: promptflow.tools.openai
+  use_variants: false
+- name: debug_output
+  type: python
+  source:
+    type: code
+    path: debug_output.py
+  inputs:
+    input1: ${classify_with_llm.output}
   use_variants: false
 - name: convert_to_dict
   type: python

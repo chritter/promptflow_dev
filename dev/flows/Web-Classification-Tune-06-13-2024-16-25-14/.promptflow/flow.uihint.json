@@ -12,12 +12,6 @@
         "inputsValue": {}
       }
     },
-    "prepare_examples": {
-      "variant_0": {
-        "inputs": {},
-        "inputsValue": {}
-      }
-    },
     "classify_with_llm": {
       "variant_0": {
         "inputs": {},

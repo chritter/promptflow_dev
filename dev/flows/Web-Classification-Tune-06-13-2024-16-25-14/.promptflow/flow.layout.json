@@ -23,29 +23,23 @@
       "height": 75,
       "index": 1
     },
-    "prepare_examples": {
-      "x": 227.5,
-      "y": 310,
-      "height": 75,
-      "index": 2
-    },
     "classify_with_llm": {
       "x": 227.5,
       "y": 444,
       "height": 75,
-      "index": 3
+      "index": 2
     },
     "debug_output": {
       "x": 470,
       "y": 578,
       "height": 75,
-      "index": 4
+      "index": 3
     },
     "convert_to_dict": {
       "x": 140,
       "y": 578,
       "height": 75,
-      "index": 5
+      "index": 4
     }
   },
   "viewport": {
@@ -54,8 +48,8 @@
       0,
       0,
       1,
-      -140,
-      -234.25
+      -16.9000244140625,
+      -273.25
     ]
   }
 }

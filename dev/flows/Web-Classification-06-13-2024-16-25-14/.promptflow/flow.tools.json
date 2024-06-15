@@ -10,10 +10,9 @@
           ]
         }
       },
-      "function": "fetch_text_content_from_url",
-      "is_builtin": false,
-      "name": "fetch_text_content_from_url.py",
       "source": "fetch_text_content_from_url.py",
+      "function": "fetch_text_content_from_url",
+      "name": "fetch_text_content_from_url.py",
       "toolId": "fetch_text_content_from_url.py"
     },
     "summarize_text_content.jinja2": {
@@ -25,18 +24,15 @@
           ]
         }
       },
-      "description": "Summarize webpage content into a short paragraph.",
-      "is_builtin": false,
-      "name": "summarize_text_content.jinja2",
       "source": "summarize_text_content.jinja2",
+      "name": "summarize_text_content.jinja2",
       "toolId": "summarize_text_content.jinja2"
     },
     "prepare_examples.py": {
       "type": "python",
-      "function": "prepare_examples",
-      "is_builtin": false,
-      "name": "prepare_examples.py",
       "source": "prepare_examples.py",
+      "function": "prepare_examples",
+      "name": "prepare_examples.py",
       "toolId": "prepare_examples.py"
     },
     "classify_with_llm.jinja2": {
@@ -58,10 +54,8 @@
           ]
         }
       },
-      "description": "Multi-class classification of a given url and text content.",
-      "is_builtin": false,
-      "name": "classify_with_llm.jinja2",
       "source": "classify_with_llm.jinja2",
+      "name": "classify_with_llm.jinja2",
       "toolId": "classify_with_llm.jinja2"
     },
     "convert_to_dict.py": {
@@ -73,11 +67,32 @@
           ]
         }
       },
-      "function": "convert_to_dict",
-      "is_builtin": false,
-      "name": "convert_to_dict.py",
       "source": "convert_to_dict.py",
+      "function": "convert_to_dict",
+      "name": "convert_to_dict.py",
       "toolId": "convert_to_dict.py"
+    },
+    "debug_output.py": {
+      "name": "debug_output.py",
+      "type": "python",
+      "inputs": {
+        "input1": {
+          "type": [
+            "string"
+          ],
+          "allow_manual_entry": false,
+          "is_multi_select": false,
+          "input_type": "default",
+          "value": "${classify_with_llm.output}",
+          "id": "uwvew7wo"
+        }
+      },
+      "source": "debug_output.py",
+      "function": "my_python_tool",
+      "is_builtin": false,
+      "enable_kwargs": false,
+      "tool_state": "stable",
+      "toolId": "debug_output.py"
     }
   }
 }
