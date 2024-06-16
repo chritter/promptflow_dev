@@ -1,0 +1,70 @@
+id: count-cars
+name: Count Cars
+inputs:
+  image_1:
+    type: image
+    default: cars1.jpg
+    is_chat_input: false
+  image_2:
+    type: image
+    default: cars2.jpg
+    is_chat_input: false
+  system_message:
+    type: string
+    default: You are an AI assistant. You task is to check the number of red cars in
+      the image. Reply in plain json, with key "red cars", and possible values
+      of number of red cars.
+    is_chat_input: false
+outputs:
+  response:
+    type: string
+    reference: ${count_number.output}
+nodes:
+- name: gpt4vredcars1
+  type: custom_llm
+  source:
+    type: package_with_prompt
+    path: gpt4v.jinja2
+    tool: promptflow.tools.openai_gpt4v.OpenAI.chat
+  inputs:
+    connection: prmoptflowkeyaml
+    model: gpt-4-vision-preview
+    temperature: 0
+    top_p: 1
+    max_tokens: 512
+    presence_penalty: 0
+    frequency_penalty: 0
+    seed: 42
+    detail: auto
+    image_input: ${inputs.image_1}
+    system_message: ${inputs.system_message}
+  use_variants: false
+- name: gpt4vredcars2
+  type: custom_llm
+  source:
+    type: package_with_prompt
+    path: gpt4vredcars2.jinja2
+    tool: promptflow.tools.openai_gpt4v.OpenAI.chat
+  inputs:
+    connection: prmoptflowkeyaml
+    model: gpt-4-vision-preview
+    temperature: 0
+    top_p: 1
+    max_tokens: 512
+    presence_penalty: 0
+    frequency_penalty: 0
+    seed: 42
+    detail: auto
+    image_input: ${inputs.image_2}
+    system_message: ${inputs.system_message}
+  use_variants: false
+- name: count_number
+  type: python
+  source:
+    type: code
+    path: count_number.py
+  inputs:
+    input1: ${gpt4vredcars1.output}
+    input2: ${gpt4vredcars2.output}
+  use_variants: false
+node_variants: {}

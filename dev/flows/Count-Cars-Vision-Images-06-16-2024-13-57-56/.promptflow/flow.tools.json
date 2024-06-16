@@ -1,0 +1,257 @@
+{
+  "package": {
+    "promptflow.tools.openai_gpt4v.OpenAI.chat": {
+      "name": "OpenAI GPT-4V",
+      "type": "custom_llm",
+      "inputs": {
+        "connection": {
+          "type": [
+            "OpenAIConnection"
+          ],
+          "allow_manual_entry": false,
+          "is_multi_select": false,
+          "input_type": "default",
+          "ui_hints": {
+            "index": 0
+          },
+          "id": "95y2lz8u"
+        },
+        "detail": {
+          "type": [
+            "string"
+          ],
+          "default": "auto",
+          "enum": [
+            "low",
+            "high",
+            "auto"
+          ],
+          "allow_manual_entry": false,
+          "is_multi_select": false,
+          "input_type": "default",
+          "ui_hints": {
+            "index": 9
+          },
+          "value": "auto",
+          "id": "fyum1z35"
+        },
+        "frequency_penalty": {
+          "type": [
+            "double"
+          ],
+          "default": 0,
+          "allow_manual_entry": false,
+          "is_multi_select": false,
+          "input_type": "default",
+          "ui_hints": {
+            "index": 7
+          },
+          "value": 0,
+          "id": "zxla0970"
+        },
+        "max_tokens": {
+          "type": [
+            "int"
+          ],
+          "default": 512,
+          "allow_manual_entry": false,
+          "is_multi_select": false,
+          "input_type": "default",
+          "ui_hints": {
+            "index": 4
+          },
+          "value": 512,
+          "id": "2i2ntms9"
+        },
+        "model": {
+          "type": [
+            "string"
+          ],
+          "enum": [
+            "gpt-4-vision-preview"
+          ],
+          "allow_manual_entry": true,
+          "is_multi_select": false,
+          "input_type": "default",
+          "ui_hints": {
+            "index": 1
+          },
+          "id": "supis96d"
+        },
+        "presence_penalty": {
+          "type": [
+            "double"
+          ],
+          "default": 0,
+          "allow_manual_entry": false,
+          "is_multi_select": false,
+          "input_type": "default",
+          "ui_hints": {
+            "index": 6
+          },
+          "value": 0,
+          "id": "i6nbchlu"
+        },
+        "seed": {
+          "type": [
+            "int"
+          ],
+          "default": "",
+          "allow_manual_entry": false,
+          "is_multi_select": false,
+          "input_type": "default",
+          "ui_hints": {
+            "index": 8
+          },
+          "value": "",
+          "id": "hhuy76ov"
+        },
+        "stop": {
+          "type": [
+            "list"
+          ],
+          "default": "",
+          "allow_manual_entry": false,
+          "is_multi_select": false,
+          "input_type": "default",
+          "ui_hints": {
+            "index": 5
+          },
+          "value": "",
+          "id": "k75yv192"
+        },
+        "temperature": {
+          "type": [
+            "double"
+          ],
+          "default": 1,
+          "allow_manual_entry": false,
+          "is_multi_select": false,
+          "input_type": "default",
+          "ui_hints": {
+            "index": 2
+          },
+          "value": 1,
+          "id": "uftthazq"
+        },
+        "top_p": {
+          "type": [
+            "double"
+          ],
+          "default": 1,
+          "allow_manual_entry": false,
+          "is_multi_select": false,
+          "input_type": "default",
+          "ui_hints": {
+            "index": 3
+          },
+          "value": 1,
+          "id": "8a0eff4n"
+        }
+      },
+      "description": "Use OpenAI GPT-4V to leverage vision ability.",
+      "module": "promptflow.tools.openai_gpt4v",
+      "class_name": "OpenAI",
+      "function": "chat",
+      "icon": {
+        "dark": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAA2ElEQVR4nJXSzW3CQBAF4DUSTjk+Al1AD0ikESslpBIEheRALhEpgAYSWV8OGUublf/yLuP3PPNmdndS+gdwXZrYDmh7fGE/W+wXbaYd8IYm4rxJPnZ0boI3wZcdJxs/n+AwV7DFK7aFyfQdYIMLPvES8YJNf5yp4jMeeEYdWh38gXOR35YGHe5xabvQdsHv6PLi8qV6gycc8YH3iMfQu6Lh4ASr+F5Hh3XwVWnQYzUkVlX1nccplAb1SN6Y/sfgmlK64VS8wimldIv/0yj2QLkHizG0iWP4AVAfQ34DVQONAAAAAElFTkSuQmCC",
+        "light": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAx0lEQVR4nJWSwQ2CQBBFX0jAcjgqXUgPJNiIsQQrIVCIFy8GC6ABDcGDX7Mus9n1Xz7zZ+fPsLPwH4bUg0dD2wMPcbR48Uxq4AKU4iSTDwZ1LhWXipN/B3V0J6hjBTvgLHZNonewBXrgDpzEvXSIjN0BE3AACmmF4kl5F6tNzcCoLpW0SvGovFvsb4oZ2AANcAOu4ka6axCcINN3rg654sww+CYsPD0OwjcozFNh/Qcd78tqVbCIW+n+Fky472Bh/Q6SYb1EEy8tDzd+9IsVPAAAAABJRU5ErkJggg=="
+      },
+      "is_builtin": true,
+      "package": "promptflow-tools",
+      "package_version": "1.5.0rc11",
+      "default_prompt": "# system:\nAs an AI assistant, your task involves interpreting images and responding to questions about the image.\nRemember to provide accurate answers based on the information present in the image.\n\n# user:\nCan you tell me what the image depicts?\n![image]({{image_input}})\n",
+      "enable_kwargs": false,
+      "tool_state": "preview",
+      "toolId": "promptflow.tools.openai_gpt4v.OpenAI.chat"
+    }
+  },
+  "code": {
+    "count_number.py": {
+      "name": "count_number",
+      "type": "python",
+      "inputs": {
+        "input1": {
+          "type": [
+            "string"
+          ],
+          "allow_manual_entry": false,
+          "is_multi_select": false,
+          "input_type": "default",
+          "value": "${GPT4V_AOAI_1.output}",
+          "id": "n9vdoszd"
+        },
+        "input2": {
+          "type": [
+            "string"
+          ],
+          "allow_manual_entry": false,
+          "is_multi_select": false,
+          "input_type": "default",
+          "value": "${GPT4V_AOAI_2.output}",
+          "id": "h6frbslx"
+        }
+      },
+      "source": "count_number.py",
+      "function": "calculate_total_red_cars",
+      "is_builtin": false,
+      "enable_kwargs": false,
+      "tool_state": "stable",
+      "toolId": "count_number.py"
+    },
+    "gpt4v.jinja2": {
+      "name": "gpt4v.jinja2",
+      "type": "prompt",
+      "inputs": {
+        "image_input": {
+          "type": [
+            "image"
+          ],
+          "allow_manual_entry": false,
+          "is_multi_select": false,
+          "input_type": "default"
+        },
+        "system_message": {
+          "type": [
+            "string"
+          ],
+          "allow_manual_entry": false,
+          "is_multi_select": false,
+          "input_type": "default"
+        }
+      },
+      "source": "gpt4v.jinja2",
+      "is_builtin": false,
+      "enable_kwargs": false,
+      "tool_state": "stable",
+      "toolId": "gpt4v.jinja2"
+    },
+    "gpt4vredcars2.jinja2": {
+      "name": "gpt4vredcars2.jinja2",
+      "type": "prompt",
+      "inputs": {
+        "image_input": {
+          "type": [
+            "image"
+          ],
+          "allow_manual_entry": false,
+          "is_multi_select": false,
+          "input_type": "default"
+        },
+        "system_message": {
+          "type": [
+            "string"
+          ],
+          "allow_manual_entry": false,
+          "is_multi_select": false,
+          "input_type": "default"
+        }
+      },
+      "source": "gpt4vredcars2.jinja2",
+      "is_builtin": false,
+      "enable_kwargs": false,
+      "tool_state": "stable",
+      "toolId": "gpt4vredcars2.jinja2"
+    }
+  }
+}
