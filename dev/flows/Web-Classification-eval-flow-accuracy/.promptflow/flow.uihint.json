@@ -1,0 +1,16 @@
+{
+  "nodes": {
+    "grade": {
+      "variant_0": {
+        "inputs": {},
+        "inputsValue": {}
+      }
+    },
+    "calculate_accuracy": {
+      "variant_0": {
+        "inputs": {},
+        "inputsValue": {}
+      }
+    }
+  }
+}

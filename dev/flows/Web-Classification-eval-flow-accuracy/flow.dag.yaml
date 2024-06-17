@@ -1,0 +1,41 @@
+id: classification_accuracy_eval
+name: Classification Accuracy Evaluation
+inputs:
+  groundtruth:
+    type: string
+    default: App
+    description: Please specify the groundtruth column, which contains the true
+      label to the outputs that your flow produces.
+    is_chat_input: false
+  prediction:
+    type: string
+    default: App
+    description: Please specify the prediction column, which contains the predicted
+      outputs that your flow produces.
+    is_chat_input: false
+outputs:
+  grade:
+    type: string
+    reference: ${grade.output}
+nodes:
+- name: grade
+  type: python
+  source:
+    type: code
+    path: grade.py
+  inputs:
+    groundtruth: ${inputs.groundtruth}
+    prediction: ${inputs.prediction}
+  use_variants: false
+- name: calculate_accuracy
+  type: python
+  source:
+    type: code
+    path: calculate_accuracy.py
+  inputs:
+    grades: ${grade.output}
+  aggregation: true
+  use_variants: false
+node_variants: {}
+environment:
+  python_requirements_txt: requirements.txt
