@@ -2,23 +2,35 @@
   "package": {},
   "code": {
     "grade.py": {
+      "name": "grade.py",
       "type": "python",
       "inputs": {
         "groundtruth": {
           "type": [
             "string"
-          ]
+          ],
+          "allow_manual_entry": false,
+          "is_multi_select": false,
+          "input_type": "default",
+          "value": "${inputs.groundtruth}",
+          "id": "1aih1rla"
         },
         "prediction": {
           "type": [
             "string"
-          ]
+          ],
+          "allow_manual_entry": false,
+          "is_multi_select": false,
+          "input_type": "default",
+          "value": "${inputs.prediction}",
+          "id": "wy3x7dok"
         }
       },
+      "source": "grade.py",
       "function": "grade",
       "is_builtin": false,
-      "name": "grade.py",
-      "source": "grade.py",
+      "enable_kwargs": false,
+      "tool_state": "stable",
       "toolId": "grade.py"
     },
     "calculate_accuracy.py": {
@@ -26,14 +38,13 @@
       "inputs": {
         "grades": {
           "type": [
-            "list"
+            "object"
           ]
         }
       },
-      "function": "calculate_accuracy",
-      "is_builtin": false,
-      "name": "calculate_accuracy.py",
       "source": "calculate_accuracy.py",
+      "function": "calculate_accuracy",
+      "name": "calculate_accuracy.py",
       "toolId": "calculate_accuracy.py"
     }
   }

@@ -1,0 +1,4 @@
+{"predict": "App", "truth": "App"}
+{"predict": "Apple", "truth": "Windows"}
+{"predict": "Windows", "truth": "Windows"}
+{"predict": "Windows", "truth": "Windows"}

@@ -24,16 +24,12 @@
           ]
         }
       },
-      "source": "summarize_text_content.jinja2",
-      "name": "summarize_text_content.jinja2",
-      "toolId": "summarize_text_content.jinja2"
+      "source": "summarize_text_content.jinja2"
     },
     "prepare_examples.py": {
       "type": "python",
       "source": "prepare_examples.py",
-      "function": "prepare_examples",
-      "name": "prepare_examples.py",
-      "toolId": "prepare_examples.py"
+      "function": "prepare_examples"
     },
     "classify_with_llm.jinja2": {
       "type": "llm",
@@ -54,9 +50,7 @@
           ]
         }
       },
-      "source": "classify_with_llm.jinja2",
-      "name": "classify_with_llm.jinja2",
-      "toolId": "classify_with_llm.jinja2"
+      "source": "classify_with_llm.jinja2"
     },
     "convert_to_dict.py": {
       "type": "python",
@@ -68,31 +62,19 @@
         }
       },
       "source": "convert_to_dict.py",
-      "function": "convert_to_dict",
-      "name": "convert_to_dict.py",
-      "toolId": "convert_to_dict.py"
+      "function": "convert_to_dict"
     },
     "debug_output.py": {
-      "name": "debug_output.py",
       "type": "python",
       "inputs": {
         "input1": {
           "type": [
             "string"
-          ],
-          "allow_manual_entry": false,
-          "is_multi_select": false,
-          "input_type": "default",
-          "value": "${classify_with_llm.output}",
-          "id": "uwvew7wo"
+          ]
         }
       },
       "source": "debug_output.py",
-      "function": "my_python_tool",
-      "is_builtin": false,
-      "enable_kwargs": false,
-      "tool_state": "stable",
-      "toolId": "debug_output.py"
+      "function": "my_python_tool"
     }
   }
 }

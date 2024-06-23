@@ -1,7 +1,7 @@
 id: classification_accuracy_eval
 name: Classification Accuracy Evaluation
 inputs:
-  groundtruth:
+  groundtrutho:
     type: string
     default: App
     description: Please specify the groundtruth column, which contains the true
@@ -24,7 +24,7 @@ nodes:
     type: code
     path: grade.py
   inputs:
-    groundtruth: ${inputs.groundtruth}
+    groundtruth: ${inputs.groundtrutho}
     prediction: ${inputs.prediction}
   use_variants: false
 - name: calculate_accuracy

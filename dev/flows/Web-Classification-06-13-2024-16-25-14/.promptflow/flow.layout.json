@@ -11,12 +11,6 @@
       "y": 712,
       "index": -1
     },
-    "fetch_text_content_from_url": {
-      "x": 557.5,
-      "y": 176,
-      "height": 75,
-      "index": 0
-    },
     "summarize_text_content": {
       "x": 557.5,
       "y": 310,
@@ -46,6 +40,12 @@
       "y": 578,
       "height": 75,
       "index": 5
+    },
+    "fetch_text_content_from_url": {
+      "x": 557.5,
+      "y": 176,
+      "height": 75,
+      "index": 0
     }
   },
   "viewport": {
@@ -54,8 +54,8 @@
       0,
       0,
       1,
-      -140,
-      -234.25
+      -29.5,
+      108
     ]
   }
 }
